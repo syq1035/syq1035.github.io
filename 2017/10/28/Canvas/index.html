@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>Hexo</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_859455_eaq7v6w8ktj.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <div class="header-title">
+
+        </div>
+        <nav class="header-nav">
+            
+            <a href="/" class="header-nav-link">
+                首页
+            </a>
+            
+
+            
+            <a href="/archives" class="header-nav-link">
+                归档
+            </a>
+            
+
+            
+            <a href="/tags" class="header-nav-link">
+                标签
+            </a>
+            
+
+            
+        </nav>
+    </div>
+</header>
+<header class="mobile-header">
+    <div class="mobile-nav">
+        <div class="mobile-nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-nav-title">
+            <a href="/" class="mobile-nav-title-link">syq's Blog</a>
+        </div>
+
+    </div>
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-home"></i>
+                <a href="/" class="mobile-nav-link">首页</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-archive"></i>
+                <a href="/archives" class="mobile-nav-link">归档</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-tag"></i>
+                <a href="/tags" class="mobile-nav-link">标签</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-about"></i>
+                <a href="/about/" class="mobile-nav-link">关于</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="main">
+    <div class="content-inner">
+        <div class="posts">
+    <article class="post-whole">
+        <div class="post-title">
+            <h2 class="title">Canvas</h2>
+            <div class="post-meta">
+                <span class="post-time">2017-10-28</span>
+                
+                <span class="post-category">
+                    
+                    <a class="category" href="/categories/Canvas/">Canvas</a>
+                    
+                </span>
+                
+                <span class="post-visit"> 阅读次数：<span id="busuanzi_value_page_pv"></span></span>
+            </div>
+        </div>
+        <div class="post-toc" id="post-toc">
+    <strong class="post-toc-title">目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建canvas"><span class="toc-text">创建canvas</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#画线"><span class="toc-text">画线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#画矩形"><span class="toc-text">画矩形</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#画网格"><span class="toc-text">画网格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法"><span class="toc-text">方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用jquery控制canvas的时候出现的问题"><span class="toc-text">使用jquery控制canvas的时候出现的问题</span></a></li></ol>
+    <div class="back-to-top" id="back-to-top">
+        <a href="javascript:void(0);">回到顶部</a>
+    </div>
+</div>
+        <div class="post-content">
+            <h3 id="创建canvas"><a href="#创建canvas" class="headerlink" title="创建canvas"></a>创建canvas</h3><p>首先创建一个canvas元素，我们只需要在html文件中加入这么一句代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;canvas&quot;&gt;&lt;/canvas&gt;</span><br></pre></td></tr></table></figure>
+<p>同时我们也可以通过canvas的标签属性width和height设置canvas画布的大小：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;canvas&quot; width=&quot;800&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>当然，我们也可以通过js来设置canvas的宽高。</p>
+<p>接下来我们就在js中获取到该canvas元素，然后设置它的宽高，并获取到上下文的环境：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var canvas = document.getElementById(&quot;canvas&quot;);//获取到canvas元素</span><br><span class="line">//设置宽高</span><br><span class="line">canvas.width = 800;</span><br><span class="line">canvas.height = 800;</span><br><span class="line">var context = canvas.getContext(&quot;2d&quot;);//获取上下文的环境</span><br></pre></td></tr></table></figure>
+<p>接下来的所有操作都是基于这个context的上下文环境。</p>
+<h3 id="画线"><a href="#画线" class="headerlink" title="画线"></a>画线</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">context.moveTo(100,100);</span><br><span class="line">context.lineTo(500,500);</span><br></pre></td></tr></table></figure>
+<p>moveTo()方法表示一次绘制的起点坐标，lineTo()表示基于上一个坐标点到这个坐标点之间的直线连接。</p>
+<p>值得注意的是，canvas是基于状态的绘制，而不是基于对象的绘制。所以，上面代码都是状态的设置，我们还需要使用stroke()方法进行绘制：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">context.stroke();//绘制</span><br></pre></td></tr></table></figure>
+<p>线条的其它基本属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">context.lineWidth = 8;//线条的宽度</span><br><span class="line">context.strokeStyle = &quot;#333&quot;;//线条的颜色</span><br></pre></td></tr></table></figure>
+<p>一个简单的绘制一条直线的完整例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;canvas&quot;&gt;&lt;/canvas&gt;                                                     **.html</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var canvas = document.getElementById(&quot;canvas&quot;);//获取到canvas元素                    **.js</span><br><span class="line">//设置宽高</span><br><span class="line">canvas.width = 800;</span><br><span class="line">canvas.height = 800;</span><br><span class="line">var context = canvas.getContext(&quot;2d&quot;);//获取上下文的环境</span><br><span class="line">//canvas 是基于状态的绘制，而不是对象</span><br><span class="line">context.moveTo(100,100);</span><br><span class="line">context.lineTo(500,500);</span><br><span class="line">context.lineWidth = 8;//线条的宽度</span><br><span class="line">context.strokeStyle = &quot;#333&quot;;//线条的颜色</span><br><span class="line">context.stroke();//绘制</span><br></pre></td></tr></table></figure>
+<h3 id="画矩形"><a href="#画矩形" class="headerlink" title="画矩形"></a>画矩形</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//绘制实心矩形:</span><br><span class="line">context.fillStyle = &apos;blue&apos;;</span><br><span class="line">context.fillRect(100,125,50,50); //(x,y,w,h)</span><br><span class="line"></span><br><span class="line">//绘制空心矩形</span><br><span class="line">context.strokeStyle = &apos;yellow&apos;;</span><br><span class="line">context.strokeRect(100,180,50,50) //(x,y,w,h)</span><br></pre></td></tr></table></figure>
+<h3 id="画网格"><a href="#画网格" class="headerlink" title="画网格"></a>画网格</h3><p>网格是通过先画矩形，然后在矩形内画线形成的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//描绘边框</span><br><span class="line">context.beginPath();</span><br><span class="line">context.linewidth = 1; </span><br><span class="line">context.rect(0,0,width,height);</span><br><span class="line">context.stroke();</span><br><span class="line">//准备画横线</span><br><span class="line">for(let row_i = 1; row_i&lt;row; row_i++)&#123;</span><br><span class="line">var y = row_i * 30;             </span><br><span class="line">context.moveTo(0,y);  </span><br><span class="line">context.lineTo(width,y);</span><br><span class="line">&#125;</span><br><span class="line">//准备画竖线</span><br><span class="line">for(let col_i = 1; col_i&lt;col; col_i++)&#123;</span><br><span class="line">var x = col_i * 30;                          </span><br><span class="line">context.moveTo(x, 0);  </span><br><span class="line">context.lineTo(x, height);</span><br><span class="line">&#125;</span><br><span class="line">//完成描绘  </span><br><span class="line">context.stroke();</span><br></pre></td></tr></table></figure>
+<p>绘制动态大小的网格例子:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">//单个网格宽高</span><br><span class="line">let GAID_WIDTH = 30;</span><br><span class="line">let GAID_HEIGHT = 30;</span><br><span class="line"></span><br><span class="line">let canvas = document.getElementById(&apos;canvas&apos;);</span><br><span class="line">context = canvas.getContext(&quot;2d&quot;);</span><br><span class="line"> </span><br><span class="line">function createGrid(row,col)&#123;</span><br><span class="line">    //计算画布宽高</span><br><span class="line">    let width = GAID_WIDTH*col;</span><br><span class="line">    let height = GAID_HEIGHT*row;</span><br><span class="line">    //设置画布宽高</span><br><span class="line">    canvas.setAttribute(&quot;width&quot;,width);</span><br><span class="line">    canvas.setAttribute(&quot;height&quot;,height);</span><br><span class="line">    </span><br><span class="line">    //描绘边框</span><br><span class="line">    context.beginPath();</span><br><span class="line">    context.linewidth = 1; </span><br><span class="line">    context.rect(0,0,width,height);</span><br><span class="line">    context.stroke();</span><br><span class="line"></span><br><span class="line">    //准备画横线</span><br><span class="line">    for(let row_i = 1; row_i&lt;row; row_i++)&#123;</span><br><span class="line">    var y = row_i*GAID_HEIGHT;          </span><br><span class="line">    context.moveTo(0,y);  </span><br><span class="line">    context.lineTo(width,y);</span><br><span class="line">    &#125;</span><br><span class="line">    //准备画竖线</span><br><span class="line">    for(let col_i = 1; col_i&lt;col; col_i++)&#123;</span><br><span class="line">    var x = col_i*GAID_WIDTH;                        </span><br><span class="line">    context.moveTo(x,0);  </span><br><span class="line">    context.lineTo(x,height);</span><br><span class="line">    &#125;</span><br><span class="line">    //完成描绘  </span><br><span class="line">    context.stroke();</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>1 . <code>moveTo(x, y)</code> 将笔触移动到指定的坐标x以及y上。</p>
+<p>当canvas初始化或者<code>beginPath()</code>调用后，你通常会使用<code>moveTo()</code>函数设置起点。我们也能够使用<code>moveTo()</code>绘制一些不连续的路径。</p>
+<p>2 . <code>lineTo(x, y)</code></p>
+<p>该方法有两个参数：x以及y ，代表坐标系中直线结束的点。开始点和之前的绘制路径有关，之前路径的结束点就是接下来的开始点，等等。。。开始点也可以通过<code>moveTo()</code>函数改变。</p>
+<p>3 . <code>beginPath()</code> 开始一条路径，或重置当前的路径</p>
+<p>4 .<code>closePath()</code> 创建从当前点到开始点的路径</p>
+<p>5 .<code>fillStyle = color</code> 设置图形的填充颜色。</p>
+<p><code>strokeStyle = color</code> 设置图形轮廓的颜色。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">context.fillStyle = &quot;black&quot;;      //fillStyle 属性来填充另一个颜色/渐变</span><br><span class="line">context.fill();      //fill()方法填充图像（默认是黑色）</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">context.font=&quot;15px Georgia&quot;;     //设置字体</span><br><span class="line">context.fillText( text,x,y,maxWidth )    //在画布上绘制填色的文本。文本的默认颜色是黑色</span><br></pre></td></tr></table></figure>
+<p>6 .<code>clearRect( x,y,width,height )</code> 清空给定矩形内的指定像素 , 可用于在重绘时清空画布</p>
+<p>7 .<code>isPointInPath( x,y )</code> 方法返回 true，如果指定的点位于当前路径中；否则返回 false。</p>
+<p>仅能识别当前上下文环境里的图形路径，而之前绘制的路径，无法回溯判断。这种问题的解决方法是：当点击事件发生时，重绘所有图形，每绘制一个就使用isPointInPath方法，判断事件坐标是否在该图形覆盖范围内。</p>
+<p>8 .<code>getImageData(x, y, width, height)</code> 获取 canvas 指定范围的像素数据，然后遍历判断 RGBA 色值。</p>
+<h3 id="使用jquery控制canvas的时候出现的问题"><a href="#使用jquery控制canvas的时候出现的问题" class="headerlink" title="使用jquery控制canvas的时候出现的问题"></a>使用jquery控制canvas的时候出现的问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//DOM操作，没有问题</span><br><span class="line">let canvas = document.getElementById(&apos;canvas&apos;);</span><br><span class="line">context = canvas.getContext(&quot;2d&quot;);</span><br></pre></td></tr></table></figure>
+<p>换成jQuery</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">context = $(&quot;#canvas&quot;).getContext(&quot;2d&quot;);</span><br><span class="line">//出现错误，对象获取不到getContext()方法</span><br></pre></td></tr></table></figure>
+<p>jQuery操控的正确方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">context = $(&quot;#canvas&quot;)[0].getContext(&quot;2d&quot;);</span><br></pre></td></tr></table></figure>
+<p>原因：jQuery对象就是类数组，用数组下标可以取得Dom对象</p>
+
+        </div>
+        
+        <div class="post-tag">
+            
+            <a class="tag" href="/tags/Canvas/" title="Canvas">Canvas</a>
+            
+        </div>
+        
+    </article>
+</div>
+<div class="paginator">
+    
+        
+            <a class="prev" href="/2017/10/29/Git/">
+                <i class="iconfont icon-prev"></i>
+                <span class="nav-default">Git</span>
+                <span class="nav-mobile">上一篇</span>
+            </a>
+        
+        
+            <a class="next" href="/2017/10/26/canvas + jquery 实现扫雷小游戏/">
+                <span class="nav-default">canvas + jquery 实现扫雷小游戏</span>
+                <span class="nav-mobile">下一篇</span>
+                <i class="iconfont icon-next"></i>
+            </a>
+        
+    
+</div>
+<div id="comment-container"></div>
+    </div>
+</div>
+<footer class="footer-social">
+    
+
+    
+
+    
+
+    <div class="footer-copyright">
+        <p class="time-line">
+            &copy;
+            
+            
+                2017 -
+            
+            2019
+            &nbsp;<i class="iconfont icon-heart"></i>&nbsp;
+            <a target="_blank" href="https://github.com/iJinxin">syq</a>
+        </p>
+        <p class="theme-info">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme -
+            <a target="_blank" href="https://github.com/iJinxin/hexo-theme-sky">Sky</a>
+        </p>
+    </div>
+</footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    
+
+</script>
+</html>

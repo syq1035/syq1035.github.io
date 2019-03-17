@@ -76,159 +76,6 @@
     
         <article class="post-abstract">
             <div class="post-title">
-                <h2><a class="post-title-link" href="/2018/10/29/parseInt()/">parseInt()</a></h2>
-            </div>
-            <div class="post-meta">
-                <span class="post-time">2018-10-29</span>
-                
-                <span class="post-category">
-                    
-                    <a class="category" href="/categories/web/">web</a>
-                    
-                </span>
-                
-            </div>
-            <div class="post-content">
-                
-                    <p>parseInt()函数可解析一个字符串，并返回一个整数.如果第一个字符不是数字，会打印出NaN,若是字符和数字一起，并且数字在前，会打印数字忽略字母</p>
-<p>parseInt()方法：</p>
-<p> 首先想到的是js提供的parseInt方法，例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var str =&quot;4500元&quot;;</span><br><span class="line"></span><br><span class="line">var num = parseInt(str);</span><br><span class="line"></span><br><span class="line">alert(num);//4500</span><br></pre></td></tr></table></figure>
-                    <div class="read-more">
-                        <a href="/2018/10/29/parseInt()/" class="read-more-link">
-                            阅读全文
-                            <i class="iconfont icon-readmore"></i>
-                        </a>
-                    </div>
-                
-            </div>
-        </article>
-    
-        <article class="post-abstract">
-            <div class="post-title">
-                <h2><a class="post-title-link" href="/2018/10/29/三种标签元素的区别/">三种标签元素的区别</a></h2>
-            </div>
-            <div class="post-meta">
-                <span class="post-time">2018-10-29</span>
-                
-                <span class="post-category">
-                    
-                    <a class="category" href="/categories/web/">web</a>
-                    
-                </span>
-                
-            </div>
-            <div class="post-content">
-                
-                    <h4 id="三种标签元素的区别与特点："><a href="#三种标签元素的区别与特点：" class="headerlink" title="三种标签元素的区别与特点："></a>三种标签元素的区别与特点：</h4><h5 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div,ul,li,dl,dt,dd,p,h1-h6,blockquote</span><br></pre></td></tr></table></figure>
-<p>块级元素的特点：</p>
-<ul>
-<li>总在新行上开始，占据一整行</li>
-<li>默认情况下，其宽度自动填满其父元素宽度</li>
-<li>宽度始终是与浏览器宽度一样，与内容无关</li>
-<li>它可以容纳内联元素和其他块元素</li>
-<li>display属性为block</li>
-<li>块级元素的垂直相邻外边距margin会合并。
-                    <div class="read-more">
-                        <a href="/2018/10/29/三种标签元素的区别/" class="read-more-link">
-                            阅读全文
-                            <i class="iconfont icon-readmore"></i>
-                        </a>
-                    </div>
-                
-            </li></ul></div>
-        </article>
-    
-        <article class="post-abstract">
-            <div class="post-title">
-                <h2><a class="post-title-link" href="/2018/10/29/把数组的第一个元素放到末尾+数组扁平化/">把数组的第一个元素放到末尾+数组扁平化</a></h2>
-            </div>
-            <div class="post-meta">
-                <span class="post-time">2018-10-29</span>
-                
-                <span class="post-category">
-                    
-                    <a class="category" href="/categories/web/">web</a>
-                    
-                </span>
-                
-            </div>
-            <div class="post-content">
-                
-                    <p>例：两大一小排序</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">let collection=[ 1, 2, 3, 4, 6, 8, 9, 10 ];</span><br><span class="line">//创建一个二维数组</span><br><span class="line">let arr=[];</span><br><span class="line">for(let i=0;i&lt;collection.length/3;i++)&#123;</span><br><span class="line">  arr[i]=[];</span><br><span class="line">&#125;</span><br><span class="line">//三个为一组存入新数组</span><br><span class="line">for(let item of collection)&#123;</span><br><span class="line">  arr[parseInt(collection.indexOf(item)/3)].push(item);</span><br><span class="line">&#125;            //此时arr=[ [1, 2, 3], [4, 6, 8], [9,10] ]</span><br><span class="line">//把数组的第一个元素放到末尾</span><br><span class="line">for(let item of arr)&#123;</span><br><span class="line">  if(item.length==3)&#123;</span><br><span class="line">    let dele_value=item.shift();  //移除数组第一个元素，并返回</span><br><span class="line">    item.push(dele_value);    //将移除的元素再添加到数组末尾</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">//数组扁平化</span><br><span class="line">let result=arr.reduce(function(a,b)&#123;</span><br><span class="line">  return a.concat(b);</span><br><span class="line">&#125;,[]);</span><br><span class="line">return result;  //返回[ 2, 3, 1, 6, 8, 4, 9, 10 ]</span><br></pre></td></tr></table></figure>
-                    <div class="read-more">
-                        <a href="/2018/10/29/把数组的第一个元素放到末尾+数组扁平化/" class="read-more-link">
-                            阅读全文
-                            <i class="iconfont icon-readmore"></i>
-                        </a>
-                    </div>
-                
-            </div>
-        </article>
-    
-        <article class="post-abstract">
-            <div class="post-title">
-                <h2><a class="post-title-link" href="/2018/10/29/数组去重/">数组去重</a></h2>
-            </div>
-            <div class="post-meta">
-                <span class="post-time">2018-10-29</span>
-                
-                <span class="post-category">
-                    
-                    <a class="category" href="/categories/web/">web</a>
-                    
-                </span>
-                
-            </div>
-            <div class="post-content">
-                
-                    <h4 id="1-filter"><a href="#1-filter" class="headerlink" title="1.filter"></a>1.filter</h4><p>如果一个数组只包含原始变量，我们可以使用filter和indexOf方法将其去重：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var deduped = [ 1, 1, ‘a’, ‘a’ ].filter(function (el, i, arr) &#123;</span><br><span class="line"></span><br><span class="line">return arr.indexOf(el) === i;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">console.log(deduped); // [ 1, ‘a’ ]</span><br></pre></td></tr></table></figure>
-<p>我们可以使用箭头函数使写法更简明：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var deduped = [ 1, 1, ‘a’, ‘a’ ].filter( (el, i, arr) =&gt; arr.indexOf(el) === i);</span><br><span class="line"></span><br><span class="line">console.log(deduped); // [ 1, ‘a’ ]</span><br></pre></td></tr></table></figure>
-                    <div class="read-more">
-                        <a href="/2018/10/29/数组去重/" class="read-more-link">
-                            阅读全文
-                            <i class="iconfont icon-readmore"></i>
-                        </a>
-                    </div>
-                
-            </div>
-        </article>
-    
-        <article class="post-abstract">
-            <div class="post-title">
-                <h2><a class="post-title-link" href="/2018/03/29/Canvas/">Canvas</a></h2>
-            </div>
-            <div class="post-meta">
-                <span class="post-time">2018-03-29</span>
-                
-                <span class="post-category">
-                    
-                    <a class="category" href="/categories/web/">web</a>
-                    
-                </span>
-                
-            </div>
-            <div class="post-content">
-                
-                    <h3 id="创建canvas"><a href="#创建canvas" class="headerlink" title="创建canvas"></a>创建canvas</h3><p>首先创建一个canvas元素，我们只需要在html文件中加入这么一句代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;canvas&quot;&gt;&lt;/canvas&gt;</span><br></pre></td></tr></table></figure>
-<p>同时我们也可以通过canvas的标签属性width和height设置canvas画布的大小：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;canvas&quot; width=&quot;800&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;</span><br></pre></td></tr></table></figure>
-                    <div class="read-more">
-                        <a href="/2018/03/29/Canvas/" class="read-more-link">
-                            阅读全文
-                            <i class="iconfont icon-readmore"></i>
-                        </a>
-                    </div>
-                
-            </div>
-        </article>
-    
-        <article class="post-abstract">
-            <div class="post-title">
                 <h2><a class="post-title-link" href="/2018/03/29/正则表达式/">正则表达式</a></h2>
             </div>
             <div class="post-meta">
@@ -236,7 +83,7 @@
                 
                 <span class="post-category">
                     
-                    <a class="category" href="/categories/web/">web</a>
+                    <a class="category" href="/categories/正则表达式/">正则表达式</a>
                     
                 </span>
                 
@@ -259,6 +106,305 @@
             </p></blockquote></div>
         </article>
     
+        <article class="post-abstract">
+            <div class="post-title">
+                <h2><a class="post-title-link" href="/2017/11/29/map,filter,reduce的区别/">map,filter,reduce的区别</a></h2>
+            </div>
+            <div class="post-meta">
+                <span class="post-time">2017-11-29</span>
+                
+                <span class="post-category">
+                    
+                    <a class="category" href="/categories/ES6/">ES6</a>
+                    
+                </span>
+                
+            </div>
+            <div class="post-content">
+                
+                    <h6 id="一张图及其形象的说明："><a href="#一张图及其形象的说明：" class="headerlink" title="一张图及其形象的说明："></a>一张图及其形象的说明：</h6><p><img src="http://ow47touqj.bkt.clouddn.com/filter_map_reduce.png" alt="知乎用户提供"></p>
+<h2 id="一-map"><a href="#一-map" class="headerlink" title="一.map"></a>一.map</h2><p><strong>map() 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。</strong><br>用一张图来说明：<br><img src="https://www.liaoxuefeng.com/files/attachments/0013879622109990efbf9d781704b02994ba96765595f56000/0" alt="来自廖雪峰的"><br>代码实例：（初学者简单的使用就好了）<br>
+                    <div class="read-more">
+                        <a href="/2017/11/29/map,filter,reduce的区别/" class="read-more-link">
+                            阅读全文
+                            <i class="iconfont icon-readmore"></i>
+                        </a>
+                    </div>
+                
+            </p></div>
+        </article>
+    
+        <article class="post-abstract">
+            <div class="post-title">
+                <h2><a class="post-title-link" href="/2017/10/29/CSS属性/">CSS属性</a></h2>
+            </div>
+            <div class="post-meta">
+                <span class="post-time">2017-10-29</span>
+                
+                <span class="post-category">
+                    
+                    <a class="category" href="/categories/CSS/">CSS</a>
+                    
+                </span>
+                
+            </div>
+            <div class="post-content">
+                
+                    <ul>
+<li>CSS<strong>背景属性</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.w3school.com.cn/cssref/pr_background.asp" target="_blank" rel="noopener">background</a></td>
+<td>简写属性，作用是将背景属性设置在一个声明中。</td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/cssref/pr_background-attachment.asp" target="_blank" rel="noopener">background-attachment</a></td>
+<td>背景图像是否固定或者随着页面的其余部分滚动。</td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/cssref/pr_background-color.asp" target="_blank" rel="noopener">background-color</a></td>
+<td>设置元素的背景颜色。</td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/cssref/pr_background-image.asp" target="_blank" rel="noopener">background-image</a></td>
+<td>把图像设置为背景。</td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/cssref/pr_background-position.asp" target="_blank" rel="noopener">background-position</a></td>
+<td>设置背景图像的起始位置。</td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/cssref/pr_background-repeat.asp" target="_blank" rel="noopener">background-repeat</a></td>
+<td>设置背景图像是否及如何重复。</td>
+</tr>
+</tbody>
+</table>
+                    <div class="read-more">
+                        <a href="/2017/10/29/CSS属性/" class="read-more-link">
+                            阅读全文
+                            <i class="iconfont icon-readmore"></i>
+                        </a>
+                    </div>
+                
+            </div>
+        </article>
+    
+        <article class="post-abstract">
+            <div class="post-title">
+                <h2><a class="post-title-link" href="/2017/10/29/数组去重/">数组去重</a></h2>
+            </div>
+            <div class="post-meta">
+                <span class="post-time">2017-10-29</span>
+                
+                <span class="post-category">
+                    
+                    <a class="category" href="/categories/JS/">JS</a>
+                    
+                </span>
+                
+            </div>
+            <div class="post-content">
+                
+                    <h4 id="1-filter"><a href="#1-filter" class="headerlink" title="1.filter"></a>1.filter</h4><p>如果一个数组只包含原始变量，我们可以使用filter和indexOf方法将其去重：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var deduped = [ 1, 1, ‘a’, ‘a’ ].filter(function (el, i, arr) &#123;</span><br><span class="line"></span><br><span class="line">return arr.indexOf(el) === i;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">console.log(deduped); // [ 1, ‘a’ ]</span><br></pre></td></tr></table></figure>
+<p>我们可以使用箭头函数使写法更简明：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var deduped = [ 1, 1, ‘a’, ‘a’ ].filter( (el, i, arr) =&gt; arr.indexOf(el) === i);</span><br><span class="line"></span><br><span class="line">console.log(deduped); // [ 1, ‘a’ ]</span><br></pre></td></tr></table></figure>
+                    <div class="read-more">
+                        <a href="/2017/10/29/数组去重/" class="read-more-link">
+                            阅读全文
+                            <i class="iconfont icon-readmore"></i>
+                        </a>
+                    </div>
+                
+            </div>
+        </article>
+    
+        <article class="post-abstract">
+            <div class="post-title">
+                <h2><a class="post-title-link" href="/2017/10/29/把数组的第一个元素放到末尾+数组扁平化/">把数组的第一个元素放到末尾+数组扁平化</a></h2>
+            </div>
+            <div class="post-meta">
+                <span class="post-time">2017-10-29</span>
+                
+                <span class="post-category">
+                    
+                    <a class="category" href="/categories/ES6/">ES6</a>
+                    
+                </span>
+                
+            </div>
+            <div class="post-content">
+                
+                    <p>例：两大一小排序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">let collection=[ 1, 2, 3, 4, 6, 8, 9, 10 ];</span><br><span class="line">//创建一个二维数组</span><br><span class="line">let arr=[];</span><br><span class="line">for(let i=0;i&lt;collection.length/3;i++)&#123;</span><br><span class="line">  arr[i]=[];</span><br><span class="line">&#125;</span><br><span class="line">//三个为一组存入新数组</span><br><span class="line">for(let item of collection)&#123;</span><br><span class="line">  arr[parseInt(collection.indexOf(item)/3)].push(item);</span><br><span class="line">&#125;            //此时arr=[ [1, 2, 3], [4, 6, 8], [9,10] ]</span><br><span class="line">//把数组的第一个元素放到末尾</span><br><span class="line">for(let item of arr)&#123;</span><br><span class="line">  if(item.length==3)&#123;</span><br><span class="line">    let dele_value=item.shift();  //移除数组第一个元素，并返回</span><br><span class="line">    item.push(dele_value);    //将移除的元素再添加到数组末尾</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">//数组扁平化</span><br><span class="line">let result=arr.reduce(function(a,b)&#123;</span><br><span class="line">  return a.concat(b);</span><br><span class="line">&#125;,[]);</span><br><span class="line">return result;  //返回[ 2, 3, 1, 6, 8, 4, 9, 10 ]</span><br></pre></td></tr></table></figure>
+                    <div class="read-more">
+                        <a href="/2017/10/29/把数组的第一个元素放到末尾+数组扁平化/" class="read-more-link">
+                            阅读全文
+                            <i class="iconfont icon-readmore"></i>
+                        </a>
+                    </div>
+                
+            </div>
+        </article>
+    
+        <article class="post-abstract">
+            <div class="post-title">
+                <h2><a class="post-title-link" href="/2017/10/29/三种标签元素的区别/">三种标签元素的区别</a></h2>
+            </div>
+            <div class="post-meta">
+                <span class="post-time">2017-10-29</span>
+                
+                <span class="post-category">
+                    
+                    <a class="category" href="/categories/CSS/">CSS</a>
+                    
+                </span>
+                
+            </div>
+            <div class="post-content">
+                
+                    <h4 id="三种标签元素的区别与特点："><a href="#三种标签元素的区别与特点：" class="headerlink" title="三种标签元素的区别与特点："></a>三种标签元素的区别与特点：</h4><h5 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div,ul,li,dl,dt,dd,p,h1-h6,blockquote</span><br></pre></td></tr></table></figure>
+<p>块级元素的特点：</p>
+<ul>
+<li>总在新行上开始，占据一整行</li>
+<li>默认情况下，其宽度自动填满其父元素宽度</li>
+<li>宽度始终是与浏览器宽度一样，与内容无关</li>
+<li>它可以容纳内联元素和其他块元素</li>
+<li>display属性为block</li>
+<li>块级元素的垂直相邻外边距margin会合并。
+                    <div class="read-more">
+                        <a href="/2017/10/29/三种标签元素的区别/" class="read-more-link">
+                            阅读全文
+                            <i class="iconfont icon-readmore"></i>
+                        </a>
+                    </div>
+                
+            </li></ul></div>
+        </article>
+    
+        <article class="post-abstract">
+            <div class="post-title">
+                <h2><a class="post-title-link" href="/2017/10/29/模块接口module.exports和require/">模块接口module.exports和require</a></h2>
+            </div>
+            <div class="post-meta">
+                <span class="post-time">2017-10-29</span>
+                
+                <span class="post-category">
+                    
+                    <a class="category" href="/categories/ES6/">ES6</a>
+                    
+                </span>
+                
+            </div>
+            <div class="post-content">
+                
+                    <h3 id="Node-js-中的模块接口-module-exports-的使用方法"><a href="#Node-js-中的模块接口-module-exports-的使用方法" class="headerlink" title="Node.js 中的模块接口 module.exports 的使用方法"></a>Node.js 中的模块接口 module.exports 的使用方法</h3><p>在 nodejs 中，提供了 exports 和 require 两个对象，其中 exports 是模块公开的接口，你可以用它来创建你的模块 ; require 用于从外部获取一个模块的接口(也就是获取模块的 exports 对象).</p>
+<p>require 函数使用一个参数, 参数值可以带有完整路径的模块的文件名,也可以为模块名.当使用 node 中提供的模块时,在 require 函数中只需要指定模块名即可.</p>
+<h4 id="一-返回一个普通函数"><a href="#一-返回一个普通函数" class="headerlink" title="一 . 返回一个普通函数"></a>一 . 返回一个普通函数</h4><p>我们创建了一个 app.js 文件,需要在 main.js 中引用它,于是在 app.js 同级目录新建了一个 main.js 文件<br>
+                    <div class="read-more">
+                        <a href="/2017/10/29/模块接口module.exports和require/" class="read-more-link">
+                            阅读全文
+                            <i class="iconfont icon-readmore"></i>
+                        </a>
+                    </div>
+                
+            </p></div>
+        </article>
+    
+        <article class="post-abstract">
+            <div class="post-title">
+                <h2><a class="post-title-link" href="/2017/10/29/Git/">Git</a></h2>
+            </div>
+            <div class="post-meta">
+                <span class="post-time">2017-10-29</span>
+                
+                <span class="post-category">
+                    
+                    <a class="category" href="/categories/Git/">Git</a>
+                    
+                </span>
+                
+            </div>
+            <div class="post-content">
+                
+                    <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;you@example.com&quot;  //获取当前登录用户的邮箱</span><br><span class="line"></span><br><span class="line">git config --global user.name &quot;your name&quot;  //获取当前登录的用户</span><br></pre></td></tr></table></figure>
+<p>注：global 为全局配置<br>
+                    <div class="read-more">
+                        <a href="/2017/10/29/Git/" class="read-more-link">
+                            阅读全文
+                            <i class="iconfont icon-readmore"></i>
+                        </a>
+                    </div>
+                
+            </p></div>
+        </article>
+    
+        <article class="post-abstract">
+            <div class="post-title">
+                <h2><a class="post-title-link" href="/2017/10/28/Canvas/">Canvas</a></h2>
+            </div>
+            <div class="post-meta">
+                <span class="post-time">2017-10-28</span>
+                
+                <span class="post-category">
+                    
+                    <a class="category" href="/categories/Canvas/">Canvas</a>
+                    
+                </span>
+                
+            </div>
+            <div class="post-content">
+                
+                    <h3 id="创建canvas"><a href="#创建canvas" class="headerlink" title="创建canvas"></a>创建canvas</h3><p>首先创建一个canvas元素，我们只需要在html文件中加入这么一句代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;canvas&quot;&gt;&lt;/canvas&gt;</span><br></pre></td></tr></table></figure>
+<p>同时我们也可以通过canvas的标签属性width和height设置canvas画布的大小：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;canvas&quot; width=&quot;800&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;</span><br></pre></td></tr></table></figure>
+                    <div class="read-more">
+                        <a href="/2017/10/28/Canvas/" class="read-more-link">
+                            阅读全文
+                            <i class="iconfont icon-readmore"></i>
+                        </a>
+                    </div>
+                
+            </div>
+        </article>
+    
+        <article class="post-abstract">
+            <div class="post-title">
+                <h2><a class="post-title-link" href="/2017/10/26/canvas + jquery 实现扫雷小游戏/">canvas + jquery 实现扫雷小游戏</a></h2>
+            </div>
+            <div class="post-meta">
+                <span class="post-time">2017-10-26</span>
+                
+                <span class="post-category">
+                    
+                    <a class="category" href="/categories/小游戏/">小游戏</a>
+                    
+                </span>
+                
+            </div>
+            <div class="post-content">
+                
+                    <p><a href="https://syq1035.github.io/clearMine/" target="_blank" rel="noopener">游戏试玩</a></p>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>这个小游戏主要思路是canvas与数组的映射，每一个小网格对应二维数组的一个元素，利用数组来存储网格的信息，如 某网格是否有雷，周围九宫格雷的个数，是否已经被打开</p>
+                    <div class="read-more">
+                        <a href="/2017/10/26/canvas + jquery 实现扫雷小游戏/" class="read-more-link">
+                            阅读全文
+                            <i class="iconfont icon-readmore"></i>
+                        </a>
+                    </div>
+                
+            </div>
+        </article>
+    
 </div>
 <div class="paginator">
     
@@ -268,6 +414,11 @@
             上一页
         </a>
         
+        
+        <a class="next" href="/page/3/">
+            下一页
+            <i class="iconfont icon-next"></i>
+        </a>
         
     
 </div>

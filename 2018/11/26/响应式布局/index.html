@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>Hexo</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_859455_eaq7v6w8ktj.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <div class="header-title">
+
+        </div>
+        <nav class="header-nav">
+            
+            <a href="/" class="header-nav-link">
+                首页
+            </a>
+            
+
+            
+            <a href="/archives" class="header-nav-link">
+                归档
+            </a>
+            
+
+            
+            <a href="/tags" class="header-nav-link">
+                标签
+            </a>
+            
+
+            
+        </nav>
+    </div>
+</header>
+<header class="mobile-header">
+    <div class="mobile-nav">
+        <div class="mobile-nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-nav-title">
+            <a href="/" class="mobile-nav-title-link">syq's Blog</a>
+        </div>
+
+    </div>
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-home"></i>
+                <a href="/" class="mobile-nav-link">首页</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-archive"></i>
+                <a href="/archives" class="mobile-nav-link">归档</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-tag"></i>
+                <a href="/tags" class="mobile-nav-link">标签</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-about"></i>
+                <a href="/about/" class="mobile-nav-link">关于</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="main">
+    <div class="content-inner">
+        <div class="posts">
+    <article class="post-whole">
+        <div class="post-title">
+            <h2 class="title">Flexbox响应式布局</h2>
+            <div class="post-meta">
+                <span class="post-time">2018-11-26</span>
+                
+                <span class="post-category">
+                    
+                    <a class="category" href="/categories/CSS/">CSS</a>
+                    
+                </span>
+                
+                <span class="post-visit"> 阅读次数：<span id="busuanzi_value_page_pv"></span></span>
+            </div>
+        </div>
+        <div class="post-toc" id="post-toc">
+    <strong class="post-toc-title">目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#媒介查询"><span class="toc-text">媒介查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片根据设备尺寸响应"><span class="toc-text">图片根据设备尺寸响应</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使排版根据设备尺寸自如响应"><span class="toc-text">使排版根据设备尺寸自如响应</span></a></li></ol>
+    <div class="back-to-top" id="back-to-top">
+        <a href="javascript:void(0);">回到顶部</a>
+    </div>
+</div>
+        <div class="post-content">
+            <h2 id="媒介查询"><a href="#媒介查询" class="headerlink" title="媒介查询"></a>媒介查询</h2><p>媒体查询是 CSS3 中引入的一项新技术，它可以根据不同的可视窗口大小显示不同的布局。可视窗口是用户在网页上的可见区域，根据访问网站的设备不同而不同。<br>媒体查询由媒体类型组成，如果媒体类型与展示网页的设备类型匹配，则应用对应的样式。你可以在媒体查询中用上你想用的选择器和样式。<br><a id="more"></a><br>下面是一个媒体查询的例子，当设备宽度小于或等于 100px 时返回内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@media (max-width: 100px) &#123; /* CSS Rules */ &#125;</span><br></pre></td></tr></table></figure>
+<p>以下定义的媒体查询，是当设备高度大于或等于 350px 时返回内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@media (min-height: 350px) &#123; /* CSS Rules */ &#125;</span><br></pre></td></tr></table></figure>
+<p>只有当媒体类型与当前设备匹配时，才应用媒体查询中的 CSS。</p>
+<h2 id="图片根据设备尺寸响应"><a href="#图片根据设备尺寸响应" class="headerlink" title="图片根据设备尺寸响应"></a>图片根据设备尺寸响应</h2><p>用 CSS 来让图片自适应其实很简单。不要使用绝对单位：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">img &#123; width: 720px; &#125;</span><br></pre></td></tr></table></figure></p>
+<p>你应该使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">img &#123;</span><br><span class="line">  max-width: 100%;</span><br><span class="line">  display: block;</span><br><span class="line">  height: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>max-width属性能让图片以 100% 的最大宽度适应其父容器的宽度，但图片不会拉伸得比原始宽度还宽。将 display属性设置为 block可以让 image 标签从内联元素（默认值）更改为块级元素。设置 height属性为 auto 保持图片的原始宽高比。</p>
+<h2 id="使排版根据设备尺寸自如响应"><a href="#使排版根据设备尺寸自如响应" class="headerlink" title="使排版根据设备尺寸自如响应"></a>使排版根据设备尺寸自如响应</h2><p>除了用 em或 px去设置文本大小, 你还可以用视窗单位来做响应式排版。视窗单位还有百分比，它们都是相对单位，但却基于不同的参照物。视窗单位相对于设备的视窗尺寸 (宽度或高度) ，百分比是相对于父级元素的大小。<br>四个不同的视窗单位分别是：</p>
+<ul>
+<li>vw：如 10vw的意思是视窗宽度的 10%。</li>
+<li>vh：如 3vh的意思是视窗高度的 3%。</li>
+<li>vmin：如 70vmin的意思是视窗中较小尺寸的 70% (高度 VS 宽度)。</li>
+<li>vmax：如 100vmax的意思是视窗中较大尺寸的 100% (高度 VS 宽度)。</li>
+</ul>
+
+        </div>
+        
+        <div class="post-tag">
+            
+            <a class="tag" href="/tags/CSS/" title="CSS">CSS</a>
+            
+        </div>
+        
+    </article>
+</div>
+<div class="paginator">
+    
+        
+            <a class="prev" href="/2018/11/26/Flexbox/">
+                <i class="iconfont icon-prev"></i>
+                <span class="nav-default">Flexbox</span>
+                <span class="nav-mobile">上一篇</span>
+            </a>
+        
+        
+            <a class="next" href="/2018/11/25/JS event对象的clientX,offsetX,screenX,pageX区别/">
+                <span class="nav-default">clientX、pageX、offsetX、screenX的区别</span>
+                <span class="nav-mobile">下一篇</span>
+                <i class="iconfont icon-next"></i>
+            </a>
+        
+    
+</div>
+<div id="comment-container"></div>
+    </div>
+</div>
+<footer class="footer-social">
+    
+
+    
+
+    
+
+    <div class="footer-copyright">
+        <p class="time-line">
+            &copy;
+            
+            
+                2017 -
+            
+            2019
+            &nbsp;<i class="iconfont icon-heart"></i>&nbsp;
+            <a target="_blank" href="https://github.com/iJinxin">syq</a>
+        </p>
+        <p class="theme-info">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme -
+            <a target="_blank" href="https://github.com/iJinxin/hexo-theme-sky">Sky</a>
+        </p>
+    </div>
+</footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    
+
+</script>
+</html>

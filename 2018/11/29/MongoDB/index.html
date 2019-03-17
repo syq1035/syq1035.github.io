@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>Hexo</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_859455_eaq7v6w8ktj.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <div class="header-title">
+
+        </div>
+        <nav class="header-nav">
+            
+            <a href="/" class="header-nav-link">
+                首页
+            </a>
+            
+
+            
+            <a href="/archives" class="header-nav-link">
+                归档
+            </a>
+            
+
+            
+            <a href="/tags" class="header-nav-link">
+                标签
+            </a>
+            
+
+            
+        </nav>
+    </div>
+</header>
+<header class="mobile-header">
+    <div class="mobile-nav">
+        <div class="mobile-nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-nav-title">
+            <a href="/" class="mobile-nav-title-link">syq's Blog</a>
+        </div>
+
+    </div>
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-home"></i>
+                <a href="/" class="mobile-nav-link">首页</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-archive"></i>
+                <a href="/archives" class="mobile-nav-link">归档</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-tag"></i>
+                <a href="/tags" class="mobile-nav-link">标签</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-about"></i>
+                <a href="/about/" class="mobile-nav-link">关于</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="main">
+    <div class="content-inner">
+        <div class="posts">
+    <article class="post-whole">
+        <div class="post-title">
+            <h2 class="title">MongoDB</h2>
+            <div class="post-meta">
+                <span class="post-time">2018-11-29</span>
+                
+                <span class="post-category">
+                    
+                    <a class="category" href="/categories/MongoDB/">MongoDB</a>
+                    
+                </span>
+                
+                <span class="post-visit"> 阅读次数：<span id="busuanzi_value_page_pv"></span></span>
+            </div>
+        </div>
+        <div class="post-toc" id="post-toc">
+    <strong class="post-toc-title">目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#运行-MongoDB-服务器"><span class="toc-text">运行 MongoDB 服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#连接MongoDB"><span class="toc-text">连接MongoDB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看所有数据库"><span class="toc-text">查看所有数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建数据库"><span class="toc-text">创建数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除数据库"><span class="toc-text">删除数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看已有集合"><span class="toc-text">查看已有集合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建集合"><span class="toc-text">创建集合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除集合"><span class="toc-text">删除集合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插入文档"><span class="toc-text">插入文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看已插入文档"><span class="toc-text">查看已插入文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新文档"><span class="toc-text">更新文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除文档"><span class="toc-text">删除文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查询文档"><span class="toc-text">查询文档</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#AND-条件"><span class="toc-text">AND 条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OR-条件"><span class="toc-text">OR 条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#type-操作符"><span class="toc-text">$type 操作符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Limit-方法"><span class="toc-text">Limit() 方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Skip-方法"><span class="toc-text">Skip() 方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#排序sort-方法"><span class="toc-text">排序sort() 方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关联"><span class="toc-text">关联</span></a></li></ol>
+    <div class="back-to-top" id="back-to-top">
+        <a href="javascript:void(0);">回到顶部</a>
+    </div>
+</div>
+        <div class="post-content">
+            <h2 id="运行-MongoDB-服务器"><a href="#运行-MongoDB-服务器" class="headerlink" title="运行 MongoDB 服务器"></a>运行 MongoDB 服务器</h2><p>运行 MongoDB 服务器，你必须从 MongoDB 目录的 bin 目录中执行 mongod.exe 文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E:\MongoDB\bin\mongod --dbpath d:\data\db</span><br></pre></td></tr></table></figure></p>
+<h2 id="连接MongoDB"><a href="#连接MongoDB" class="headerlink" title="连接MongoDB"></a>连接MongoDB</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E:\MongoDB\bin\mongo.exe</span><br></pre></td></tr></table></figure>
+<p>或者直接打开E:\MongoDB\bin下的mongo.exe文件<br><a id="more"></a></p>
+<h2 id="查看所有数据库"><a href="#查看所有数据库" class="headerlink" title="查看所有数据库"></a>查看所有数据库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show dbs</span><br></pre></td></tr></table></figure>
+<h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;use DATABASE_NAME            //eg:  use runoob</span><br></pre></td></tr></table></figure>
+<p>如果数据库不存在，则创建数据库，否则切换到指定数据库</p>
+<h2 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;db.dropDatabase()             //删除当前use数据库</span><br></pre></td></tr></table></figure>
+<h2 id="查看已有集合"><a href="#查看已有集合" class="headerlink" title="查看已有集合"></a>查看已有集合</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show collections</span><br></pre></td></tr></table></figure>
+<h2 id="创建集合"><a href="#创建集合" class="headerlink" title="创建集合"></a>创建集合</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;db.createCollection(name, options)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>name: 要创建的集合名称</li>
+<li>options: 可选参数, 指定有关内存大小及索引的选项</li>
+</ul>
+<p>在 MongoDB 中，你不需要创建集合。当你插入一些文档时，MongoDB 会自动创建集合。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; db.mycol2.insert(&#123;&quot;name&quot; : &quot;菜鸟教程&quot;&#125;)</span><br></pre></td></tr></table></figure></p>
+<h2 id="删除集合"><a href="#删除集合" class="headerlink" title="删除集合"></a>删除集合</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;db.collection.drop()</span><br></pre></td></tr></table></figure>
+<h2 id="插入文档"><a href="#插入文档" class="headerlink" title="插入文档"></a>插入文档</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.COLLECTION_NAME.insert(document)</span><br></pre></td></tr></table></figure>
+<p>在集合 col 中插入如下数据 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;db.col.insert(&#123;</span><br><span class="line">    title: &apos;MongoDB 教程&apos;, </span><br><span class="line">    description: &apos;MongoDB 是一个 Nosql 数据库&apos;,</span><br><span class="line">    by: &apos;菜鸟教程&apos;,</span><br><span class="line">    url: &apos;http://www.runoob.com&apos;,</span><br><span class="line">    tags: [&apos;mongodb&apos;, &apos;database&apos;, &apos;NoSQL&apos;],</span><br><span class="line">    likes: 100</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h2 id="查看已插入文档"><a href="#查看已插入文档" class="headerlink" title="查看已插入文档"></a>查看已插入文档</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.COLLECTION_NAME.find()</span><br></pre></td></tr></table></figure>
+<h2 id="更新文档"><a href="#更新文档" class="headerlink" title="更新文档"></a>更新文档</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">db.collection.update(</span><br><span class="line">   &lt;query&gt;,</span><br><span class="line">   &lt;update&gt;,</span><br><span class="line">   &#123;</span><br><span class="line">     upsert: &lt;boolean&gt;,</span><br><span class="line">     multi: &lt;boolean&gt;,</span><br><span class="line">     writeConcern: &lt;document&gt;</span><br><span class="line">   &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>query </strong>: update的查询条件，类似sql update查询内where后面的。</li>
+<li><strong>update </strong>: update的对象和一些更新的操作符（如$,$inc…）等，也可以理解为sql update查询内set后面的</li>
+<li><strong>upsert </strong>: 可选，这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入。</li>
+<li><strong>multi </strong>: 可选，mongodb 默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。</li>
+<li><strong>writeConcern </strong>:可选，抛出异常的级别。</li>
+</ul>
+<p>更新标题(title):<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.col.update(&#123;&apos;title&apos;:&apos;MongoDB 教程&apos;&#125;,&#123;$set:&#123;&apos;title&apos;:&apos;MongoDB&apos;&#125;&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>以上语句只会修改第一条发现的文档，如果你要修改多条相同的文档，则需要设置 multi 参数为 true。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;db.col.update(&#123;&apos;title&apos;:&apos;MongoDB 教程&apos;&#125;,&#123;$set:&#123;&apos;title&apos;:&apos;MongoDB&apos;&#125;&#125;,&#123;multi:true&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>只更新第一条记录：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.col.update( &#123; &quot;count&quot; : &#123; $gt : 1 &#125; &#125; , &#123; $set : &#123; &quot;test2&quot; : &quot;OK&quot;&#125; &#125; );</span><br></pre></td></tr></table></figure></p>
+<p>全部更新：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.col.update( &#123; &quot;count&quot; : &#123; $gt : 3 &#125; &#125; , &#123; $set : &#123; &quot;test2&quot; : &quot;OK&quot;&#125; &#125;,false,true );</span><br></pre></td></tr></table></figure></p>
+<p>只添加第一条：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.col.update( &#123; &quot;count&quot; : &#123; $gt : 4 &#125; &#125; , &#123; $set : &#123; &quot;test5&quot; : &quot;OK&quot;&#125; &#125;,true,false );</span><br></pre></td></tr></table></figure></p>
+<p>全部添加加进去:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.col.update( &#123; &quot;count&quot; : &#123; $gt : 5 &#125; &#125; , &#123; $set : &#123; &quot;test5&quot; : &quot;OK&quot;&#125; &#125;,true,true );</span><br></pre></td></tr></table></figure></p>
+<p>全部更新：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.col.update( &#123; &quot;count&quot; : &#123; $gt : 15 &#125; &#125; , &#123; $inc : &#123; &quot;count&quot; : 1&#125; &#125;,false,true );</span><br></pre></td></tr></table></figure></p>
+<p>只更新第一条记录：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.col.update( &#123; &quot;count&quot; : &#123; $gt : 10 &#125; &#125; , &#123; $inc : &#123; &quot;count&quot; : 1&#125; &#125;,false,false );</span><br></pre></td></tr></table></figure></p>
+<h2 id="删除文档"><a href="#删除文档" class="headerlink" title="删除文档"></a>删除文档</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">db.collection.remove(</span><br><span class="line">   &lt;query&gt;,</span><br><span class="line">   &#123;</span><br><span class="line">     justOne: &lt;boolean&gt;,</span><br><span class="line">     writeConcern: &lt;document&gt;</span><br><span class="line">   &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>query </strong>:（可选）删除的文档的条件。</li>
+<li><strong>justOne </strong>: （可选）如果设为 true 或 1，则只删除一个文档。</li>
+<li><p><strong>writeConcern </strong>:（可选）抛出异常的级别。</p>
+<h2 id="查询文档"><a href="#查询文档" class="headerlink" title="查询文档"></a>查询文档</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.collection.find(query, projection)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>query</strong> ：可选，使用查询操作符指定查询条件</p>
+</li>
+<li><strong>projection</strong> ：可选，使用投影操作符指定返回的键。查询时返回文档中所有键值， 只需省略该参数即可（默认省略）。</li>
+</ul>
+<p>如果你需要以易读的方式来读取数据，可以使用 pretty() 方法，语法格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;db.col.find().pretty()</span><br></pre></td></tr></table></figure></p>
+<p>pretty() 方法以格式化的方式来显示所有文档。<br>| <strong>操作</strong> | <strong>格式</strong>                                   | <strong>范例</strong>                              | <strong>RDBMS中的类似语句</strong>   |<br>| :—– | :————————————— | :———————————- | :—————- |<br>| 等于     | {<key>:<value>}                          | db.col.find({“by”:”菜鸟教程”}).pretty() | where by = ‘菜鸟教程’ |<br>| 小于     | {<key>:{$lt:<value>}}   | db.col.find({“likes”:{$lt:50}}).pretty() | where likes &lt; 50                    |                   |<br>| 小于或等于  | {<key>:{$lte:<value>}}   | db.col.find({“likes”:{$lte:50}}).pretty() | where likes &lt;= 50                   |                   |<br>| 大于     | {<key>:{$gt:<value>}}   | db.col.find({“likes”:{$gt:50}}).pretty() | where likes &gt; 50                    |                   |<br>| 大于或等于  | {<key>:{$gte:<value>}}   | db.col.find({“likes”:{$gte:50}}).pretty() | where likes &gt;= 50                   |                   |<br>| 不等于    | {<key>:{$ne:<value>}}   | db.col.find({“likes”:{$ne:50}}).pretty() | where likes != 50                   |                   |</value></key></value></key></value></key></value></key></value></key></value></key></p>
+<h3 id="AND-条件"><a href="#AND-条件" class="headerlink" title="AND 条件"></a>AND 条件</h3><p>MongoDB 的 find() 方法可以传入多个键(key)，每个键(key)以逗号隔开，即常规 SQL 的 AND 条件。<br>语法格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;db.col.find(&#123;key1:value1, key2:value2&#125;).pretty()</span><br></pre></td></tr></table></figure></p>
+<h3 id="OR-条件"><a href="#OR-条件" class="headerlink" title="OR 条件"></a>OR 条件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;db.col.find(</span><br><span class="line">   &#123;</span><br><span class="line">      $or: [</span><br><span class="line">         &#123;key1: value1&#125;, &#123;key2:value2&#125;</span><br><span class="line">      ]</span><br><span class="line">   &#125;</span><br><span class="line">).pretty()</span><br></pre></td></tr></table></figure>
+<h3 id="type-操作符"><a href="#type-操作符" class="headerlink" title="$type 操作符"></a>$type 操作符</h3><p>基于BSON类型来检索集合中匹配的数据类型，并返回结果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">db.col.find(&#123;&quot;title&quot; : &#123;$type : 2&#125;&#125;)</span><br><span class="line">或</span><br><span class="line">db.col.find(&#123;&quot;title&quot; : &#123;$type : &apos;string&apos;&#125;&#125;)</span><br></pre></td></tr></table></figure></p>
+<h3 id="Limit-方法"><a href="#Limit-方法" class="headerlink" title="Limit() 方法"></a>Limit() 方法</h3><p>如果你需要在MongoDB中读取指定数量的数据记录，可以使用MongoDB的Limit方法，limit()方法接受一个数字参数，该参数指定从MongoDB中读取的记录条数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;db.COLLECTION_NAME.find().limit(NUMBER)</span><br></pre></td></tr></table></figure></p>
+<h3 id="Skip-方法"><a href="#Skip-方法" class="headerlink" title="Skip() 方法"></a>Skip() 方法</h3><p>我们除了可以使用limit()方法来读取指定数量的数据外，还可以使用skip()方法来跳过指定数量的数据，<br>skip方法同样接受一个数字参数作为跳过的记录条数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;db.COLLECTION_NAME.find().limit(NUMBER).skip(NUMBER)</span><br></pre></td></tr></table></figure></p>
+<h2 id="排序sort-方法"><a href="#排序sort-方法" class="headerlink" title="排序sort() 方法"></a>排序sort() 方法</h2><p>在 MongoDB 中使用 sort() 方法对数据进行排序，sort() 方法可以通过参数指定排序的字段，并使用 1 和 -1 来指定排序的方式，其中 1 为升序排列，而 -1 是用于降序排列。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;db.COLLECTION_NAME.find().sort(&#123;KEY:1&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>eg.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sort(&#123;&apos;createTime&apos;:-1&#125;)</span><br></pre></td></tr></table></figure></p>
+<h2 id="关联"><a href="#关联" class="headerlink" title="关联"></a>关联</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">populate(path, [select], [model], [match], [options]）</span><br></pre></td></tr></table></figure>
+<p>path：指定要查询的表<br>select(可选)：指定要查询的字段，-表示不显示<br>model(可选)：类型：Model，可选，指定关联字段的 model，如果没有指定就会使用Schema的ref。<br>match(可选)：类型：Object，可选，指定附加的查询条件。<br>options(可选)：类型：Object，可选，指定附加的其他查询选项，如排序以及条数限制等等。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var mongoose = require(&apos;mongoose&apos;);</span><br><span class="line">var Schema   = mongoose.Schema;</span><br><span class="line"></span><br><span class="line">var UserSchema = new Schema(&#123;</span><br><span class="line">    name  : &#123; type: String, unique: true &#125;,</span><br><span class="line">&#125;);</span><br><span class="line">var CommentSchema = new Schema(&#123;</span><br><span class="line">    commenter : &#123; type: Schema.Types.ObjectId, ref: &apos;User&apos; &#125;,</span><br><span class="line">    content   : String</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Comment.find(&#123;_id:Id&#125;)</span><br><span class="line">    .populate(&#123;path:&apos;User&apos;,select:&apos;name -_id&apos;,options:&#123;limit:5&#125;&#125;)</span><br><span class="line">    .exec(function(err,catetories)&#123;</span><br><span class="line">        if (err) &#123;</span><br><span class="line">            console.log(err);</span><br><span class="line">        &#125;</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        <div class="post-tag">
+            
+            <a class="tag" href="/tags/MongoDB/" title="MongoDB">MongoDB</a>
+            
+        </div>
+        
+    </article>
+</div>
+<div class="paginator">
+    
+        
+            <a class="prev" href="/2018/11/29/JS赋值与传参/">
+                <i class="iconfont icon-prev"></i>
+                <span class="nav-default">JS赋值与传参</span>
+                <span class="nav-mobile">上一篇</span>
+            </a>
+        
+        
+            <a class="next" href="/2018/11/29/node+express实现个性化聊天室/">
+                <span class="nav-default">node+express实现个性化聊天室</span>
+                <span class="nav-mobile">下一篇</span>
+                <i class="iconfont icon-next"></i>
+            </a>
+        
+    
+</div>
+<div id="comment-container"></div>
+    </div>
+</div>
+<footer class="footer-social">
+    
+
+    
+
+    
+
+    <div class="footer-copyright">
+        <p class="time-line">
+            &copy;
+            
+            
+                2017 -
+            
+            2019
+            &nbsp;<i class="iconfont icon-heart"></i>&nbsp;
+            <a target="_blank" href="https://github.com/iJinxin">syq</a>
+        </p>
+        <p class="theme-info">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme -
+            <a target="_blank" href="https://github.com/iJinxin/hexo-theme-sky">Sky</a>
+        </p>
+    </div>
+</footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    
+
+</script>
+</html>

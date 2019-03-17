@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>Hexo</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_859455_eaq7v6w8ktj.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <div class="header-title">
+
+        </div>
+        <nav class="header-nav">
+            
+            <a href="/" class="header-nav-link">
+                首页
+            </a>
+            
+
+            
+            <a href="/archives" class="header-nav-link">
+                归档
+            </a>
+            
+
+            
+            <a href="/tags" class="header-nav-link">
+                标签
+            </a>
+            
+
+            
+        </nav>
+    </div>
+</header>
+<header class="mobile-header">
+    <div class="mobile-nav">
+        <div class="mobile-nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-nav-title">
+            <a href="/" class="mobile-nav-title-link">syq's Blog</a>
+        </div>
+
+    </div>
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-home"></i>
+                <a href="/" class="mobile-nav-link">首页</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-archive"></i>
+                <a href="/archives" class="mobile-nav-link">归档</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-tag"></i>
+                <a href="/tags" class="mobile-nav-link">标签</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-about"></i>
+                <a href="/about/" class="mobile-nav-link">关于</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="main">
+    <div class="content-inner">
+        <div class="posts">
+    <article class="post-whole">
+        <div class="post-title">
+            <h2 class="title">Flexbox</h2>
+            <div class="post-meta">
+                <span class="post-time">2018-11-26</span>
+                
+                <span class="post-category">
+                    
+                    <a class="category" href="/categories/CSS/">CSS</a>
+                    
+                </span>
+                
+                <span class="post-visit"> 阅读次数：<span id="busuanzi_value_page_pv"></span></span>
+            </div>
+        </div>
+        <div class="post-toc" id="post-toc">
+    <strong class="post-toc-title">目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Flexbox-让复制布局变得简单"><span class="toc-text">Flexbox 让复制布局变得简单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#浏览器兼容"><span class="toc-text">浏览器兼容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用flex布局"><span class="toc-text">使用flex布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flex-direction-对-flex-item-的排列方向做控制。"><span class="toc-text">flex-direction :对 flex item 的排列方向做控制。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flex-wrap-：设置可以确定当全部的-flex-item-的宽度之和大于-flex-container-的时候，排列是否要换行。"><span class="toc-text">flex-wrap ：设置可以确定当全部的 flex item 的宽度之和大于 flex container 的时候，排列是否要换行。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#justify-content-：控制元素的对齐方式"><span class="toc-text">justify-content ：控制元素的对齐方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#order：控制元素的排列顺序"><span class="toc-text">order：控制元素的排列顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flex-设置尺寸比例"><span class="toc-text">flex 设置尺寸比例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flex-basis-设置基本宽度"><span class="toc-text">flex-basis 设置基本宽度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flex-grow-设置延展"><span class="toc-text">flex-grow 设置延展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flex-shrink-设置压缩"><span class="toc-text">flex-shrink 设置压缩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#align-items"><span class="toc-text">align-items</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#align-content"><span class="toc-text">align-content</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#响应式布局"><span class="toc-text">响应式布局</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三栏布局"><span class="toc-text">三栏布局</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#流体网格"><span class="toc-text">流体网格</span></a>
+    <div class="back-to-top" id="back-to-top">
+        <a href="javascript:void(0);">回到顶部</a>
+    </div>
+</li></div>
+        <div class="post-content">
+            <h3 id="Flexbox-让复制布局变得简单"><a href="#Flexbox-让复制布局变得简单" class="headerlink" title="Flexbox 让复制布局变得简单"></a>Flexbox 让复制布局变得简单</h3><p>传统上我们用 float 来设置布局，但是会带来恼人的副作用，需要用 clearfix 这样的复杂技巧去弥补。Flexbox 来了，一切变得简单。<br><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener">css-tricks 上的 flexbox 指南</a><br><a id="more"></a></p>
+<h3 id="浏览器兼容"><a href="#浏览器兼容" class="headerlink" title="浏览器兼容"></a>浏览器兼容</h3><p>比较新的各个移动版浏览器，包括 Chrome 等比较新的浏览器对 flexbox 都有很好的支持。如果不是太老的微信中，flexbox 也没有问题了。到 <a href="http://caniuse.com" target="_blank" rel="noopener">http://caniuse.com</a> 上看一下，唯一有问题的就是 IE ，但是 IE 是一个即将推出历史舞台的东西了，不用担心。<br>注意：根据 <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener">css-tricks 的文章</a> ，IE10 是支持 flexbox 的，但是用的语法是 display: flexbox 而不是主流通用的 display: flex ，这个不用我们自己操心，想 autoprefixer 这样的工具会自动帮我们处理的。</p>
+<h3 id="使用flex布局"><a href="#使用flex布局" class="headerlink" title="使用flex布局"></a>使用flex布局</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://images-cdn.shimo.im/ETVr3xJ4pyYx565R/image.png!thumbnail" alt="图片"></p>
+<h3 id="flex-direction-对-flex-item-的排列方向做控制。"><a href="#flex-direction-对-flex-item-的排列方向做控制。" class="headerlink" title="flex-direction :对 flex item 的排列方向做控制。"></a>flex-direction :<em>对 flex item 的排列方向做控制。</em></h3><p><img src="https://images-cdn.shimo.im/kkp6bl0OqGgcsaDS/image.png!thumbnail" alt="图片"><br>row                                row-reverse                 column             column-reverse</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">  flex-direction: row | row-reverse | column | column-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="flex-wrap-：设置可以确定当全部的-flex-item-的宽度之和大于-flex-container-的时候，排列是否要换行。"><a href="#flex-wrap-：设置可以确定当全部的-flex-item-的宽度之和大于-flex-container-的时候，排列是否要换行。" class="headerlink" title="flex-wrap ：设置可以确定当全部的 flex item 的宽度之和大于 flex container 的时候，排列是否要换行。"></a>flex-wrap ：设置可以确定当全部的 flex item 的宽度之和大于 flex container 的时候，排列是否要换行。</h3><p><img src="https://images-cdn.shimo.im/3ta1dRT0fuQQ4NrC/image.png!thumbnail" alt="图片"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.container&#123;</span><br><span class="line">  flex-wrap: nowrap | wrap | wrap-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>默认为nowrap不换行。</p>
+<h3 id="justify-content-：控制元素的对齐方式"><a href="#justify-content-：控制元素的对齐方式" class="headerlink" title="justify-content ：控制元素的对齐方式"></a>justify-content ：控制元素的<strong>对齐</strong>方式</h3><p><img src="https://images-cdn.shimo.im/uteF7flkV4ge3iw4/image.png!thumbnail" alt="图片"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="order：控制元素的排列顺序"><a href="#order：控制元素的排列顺序" class="headerlink" title="order：控制元素的排列顺序"></a>order：控制元素的排列顺序</h3><p><img src="https://images-cdn.shimo.im/qNaAXJxOhBQUrIKG/image.png!thumbnail" alt="图片"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item &#123;</span><br><span class="line">  order: &lt;integer&gt;; /* default is 0 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="flex-设置尺寸比例"><a href="#flex-设置尺寸比例" class="headerlink" title="flex 设置尺寸比例"></a>flex 设置尺寸比例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item &#123;</span><br><span class="line">  flex: none | [ &lt;&apos;flex-grow&apos;&gt; &lt;&apos;flex-shrink&apos;&gt;? || &lt;&apos;flex-basis&apos;&gt; ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="flex-basis-设置基本宽度"><a href="#flex-basis-设置基本宽度" class="headerlink" title="flex-basis 设置基本宽度"></a>flex-basis 设置基本宽度</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item &#123;</span><br><span class="line">  flex-basis: &lt;length&gt; | auto; /* default auto */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="flex-grow-设置延展"><a href="#flex-grow-设置延展" class="headerlink" title="flex-grow 设置延展"></a>flex-grow 设置延展</h3><p><img src="https://images-cdn.shimo.im/pGhQZNldG3EfjStp/image.png!thumbnail" alt="图片"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item &#123;</span><br><span class="line">  flex-grow: &lt;number&gt;; /* default 0 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果其他 item 不设置，而<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.second &#123;</span><br><span class="line">  flex-grow: 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>那么它就会在 container 内占据所有剩余空间。因为 flex-grow 的默认值是 0 。</p>
+<h3 id="flex-shrink-设置压缩"><a href="#flex-shrink-设置压缩" class="headerlink" title="flex-shrink 设置压缩"></a>flex-shrink 设置压缩</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item &#123;</span><br><span class="line">  flex-shrink: &lt;number&gt;; /* default 1 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>flex-shrink 默认值是 1 。当 container 的宽度装不下所有的 flex item 的时候，flex-shrink 就会发挥作用了。<br>比如有下面的代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.first &#123;</span><br><span class="line">  flex-shrink: 1;</span><br><span class="line">&#125;</span><br><span class="line">.second &#123;</span><br><span class="line">  flex-shrink: 2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样, first 元素没被压缩1个像素，second 元素就会被压缩2个。<br>也可以通过设置 flex-shrink: 0 来表示“我是一块砖，不能压缩”。</p>
+<h3 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a>align-items</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">  align-items: flex-start | flex-end | center | baseline | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://uploader.shimo.im/f/yWIiAgstEkANdlr3.png!thumbnail" alt="图片"></p>
+<h3 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a>align-content</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">  align-content: flex-start | flex-end | center | space-between | space-around | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://uploader.shimo.im/f/8iv5xhWj3HYSQBz0.png!thumbnail" alt="图片"></p>
+<h1 id="响应式布局"><a href="#响应式布局" class="headerlink" title="响应式布局"></a>响应式布局</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="三栏布局"><a href="#三栏布局" class="headerlink" title="三栏布局"></a>三栏布局</h1><p>用 flexbox 来制作响应式的三栏布局，主要涉及 flex-grow ，order 等属性的使用。</p>
+<p>main.css 内容如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  margin: 0;</span><br><span class="line">&#125;</span><br><span class="line">.parent &#123;</span><br><span class="line">  height: 100vh;</span><br><span class="line">  display: flex;</span><br><span class="line">  flex-direction: column;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.header, .footer &#123;</span><br><span class="line">  color: white;</span><br><span class="line">  background: #212121;</span><br><span class="line">  padding: 20px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.main &#123;</span><br><span class="line">  flex-grow: 1;</span><br><span class="line">  background-color: #B6B6B6;</span><br><span class="line">  display: flex;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.col-1, .col-2, .col-3 &#123;</span><br><span class="line">  padding: 20px;</span><br><span class="line">  color: white;</span><br><span class="line">&#125;</span><br><span class="line">.col-1 &#123;</span><br><span class="line">  background-color: #9C27B0;</span><br><span class="line">  flex-grow: 1;</span><br><span class="line">&#125;</span><br><span class="line">.col-2 &#123;</span><br><span class="line">  background-color: #FF5722;</span><br><span class="line">  order: -1;</span><br><span class="line">  width: 120px;</span><br><span class="line">&#125;</span><br><span class="line">.col-3 &#123;</span><br><span class="line">  background-color: #388E3C;</span><br><span class="line">  width: 120px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@media (max-width: 600px) &#123;</span><br><span class="line">  .main &#123;</span><br><span class="line">    flex-direction: column;</span><br><span class="line">  &#125;</span><br><span class="line">  .col-2, .col-3 &#123;</span><br><span class="line">    width: auto;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>对应 index.html 内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">  ...</span><br><span class="line">  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div class=&quot;parent&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;header&quot;&gt;header&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;main&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;col-1&quot;&gt;主体内容&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col-2&quot;&gt;导航栏&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col-3&quot;&gt;侧边栏&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+<h1 id="流体网格"><a href="#流体网格" class="headerlink" title="流体网格"></a>流体网格</h1><p>主要涉及到 flex-basis 和 flex-wrap 的深入理解。</p>
+<p>全部 CSS 代码就是这些了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  margin: 0;</span><br><span class="line">  display: flex;</span><br><span class="line">  padding-top: 30px;</span><br><span class="line">  flex-wrap: wrap;</span><br><span class="line">&#125;</span><br><span class="line">.box &#123;</span><br><span class="line">  background-color: goldenrod;</span><br><span class="line">  height: 200px;</span><br><span class="line">  flex-basis: 100%;</span><br><span class="line">  margin: 0 20px 40px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@media (min-width: 600px) &#123;</span><br><span class="line">  .box &#123;</span><br><span class="line">    flex-basis: calc(50% - 40px);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">@media (min-width: 900px) &#123;</span><br><span class="line">  .box &#123;</span><br><span class="line">    flex-basis: calc(33.3333% - 40px);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>对应 index.html<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+
+        </div>
+        
+        <div class="post-tag">
+            
+            <a class="tag" href="/tags/CSS/" title="CSS">CSS</a>
+            
+        </div>
+        
+    </article>
+</div>
+<div class="paginator">
+    
+        
+            <a class="prev" href="/2018/11/29/node+express实现个性化聊天室/">
+                <i class="iconfont icon-prev"></i>
+                <span class="nav-default">node+express实现个性化聊天室</span>
+                <span class="nav-mobile">上一篇</span>
+            </a>
+        
+        
+            <a class="next" href="/2018/11/26/响应式布局/">
+                <span class="nav-default">Flexbox响应式布局</span>
+                <span class="nav-mobile">下一篇</span>
+                <i class="iconfont icon-next"></i>
+            </a>
+        
+    
+</div>
+<div id="comment-container"></div>
+    </div>
+</div>
+<footer class="footer-social">
+    
+
+    
+
+    
+
+    <div class="footer-copyright">
+        <p class="time-line">
+            &copy;
+            
+            
+                2017 -
+            
+            2019
+            &nbsp;<i class="iconfont icon-heart"></i>&nbsp;
+            <a target="_blank" href="https://github.com/iJinxin">syq</a>
+        </p>
+        <p class="theme-info">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme -
+            <a target="_blank" href="https://github.com/iJinxin/hexo-theme-sky">Sky</a>
+        </p>
+    </div>
+</footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    
+
+</script>
+</html>
